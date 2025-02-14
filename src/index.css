@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+@tailwind utilities;
+
+:root {
+  --background: 224 71.4% 4.1%;
+  --foreground: 210 20% 98%;
+  --primary: 263.4 70% 50.4%;
+  --primary-foreground: 210 20% 98%;
+  --secondary: 215 27.9% 16.9%;
+  --secondary-foreground: 210 20% 98%;
+  --accent: 183 100% 50%;
+  --accent-foreground: 210 20% 98%;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.neon-text {
+  text-shadow: 0 0 10px hsl(var(--accent));
+}
+
+.parallax-wrapper {
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 10px;
+  height: 100vh;
+}
+
+.parallax-content {
+  position: relative;
+  transform-style: preserve-3d;
+  z-index: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 34, 0.95);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #06b6d4, #7c3aed);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #0891b2, #6d28d9);
+}
+
+/* Hide scrollbar but keep functionality */
+.snap-mandatory::-webkit-scrollbar {
+  display: none;
+}
+
+.snap-mandatory {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@layer utilities {
+    .bg-clip-text {
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
