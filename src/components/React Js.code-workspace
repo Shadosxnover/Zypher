@@ -1,7 +1,21 @@
 {
-	"folders": [
-		{
-			"path": "../../.."
-		}
-	]
+    "folders": [
+        {
+            "path": "../../.."
+        },
+        {
+            "path": "../../../../learning-journal"
+        },
+        {
+            "path": "../../../../Python's"
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "*.sqlbook": "sql",
+            "*.ndjson": "jsonl",
+            "*.dbclient-js": "javascript",
+            "thread": "cpp"
+        }
+    }
 }
